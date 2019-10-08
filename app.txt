@@ -1,2 +1,1 @@
-hi how you are doing
--great
+give some algorithm
