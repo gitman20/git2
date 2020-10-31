@@ -1,14 +1,21 @@
-        
-int binary(int base, int n,int M) 
+void add(Tnode* root, string b , int val)
 {
-    if(n==0)
-       return 1;
-    if(n==1)
-    return base;
-    int halfn=binary(base,n/2,M);
-    if(n%2==0)
-        return ( halfn * halfn ) % M;
-    else
-        return ( ( ( halfn * halfn ) % M ) * base ) % M;
-}    
 
+   Tnode* temp=root;
+
+   for(int i=0;i<sz(b);i++)
+   {
+
+    int d=(b[i]-'a');
+  
+     if(temp->children[d]==NULL){
+    temp->children[d]= new Tnode(); 
+     }
+
+     temp=(temp->children[d]);
+
+     temp->data=max(temp->data,val);
+
+   }
+
+}
