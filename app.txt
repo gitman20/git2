@@ -1,1 +1,2 @@
-give some algorithm
+Algos for fast coding
+
