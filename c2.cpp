@@ -1,17 +1,14 @@
-      while(l+1<r)
-      {
-        temp=(l+r)/2;
+        
+int binary(int base, int n,int M) 
+{
+    if(n==0)
+       return 1;
+    if(n==1)
+    return base;
+    int halfn=binary(base,n/2,M);
+    if(n%2==0)
+        return ( halfn * halfn ) % M;
+    else
+        return ( ( ( halfn * halfn ) % M ) * base ) % M;
+}    
 
-        lk1=0,lk2=0;
-    
-       if(check2(temp))
-         l=temp;
-       else
-        r=temp;
-      }
-    
-   #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-    freopen("error.txt","w", stderr);
-   #endif
